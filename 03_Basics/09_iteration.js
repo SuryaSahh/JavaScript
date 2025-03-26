@@ -3,6 +3,8 @@
 // 2. while(){}
 // 3. do{}while();
 // 4. for of loop     // Array specific loop
+//["","",""]
+// [{},{},{}]
 // eg: for(const iteration of object){
 // }
 
