@@ -43,3 +43,8 @@ coding1.forEach((item)=>{
 })
 
 // {} => item
+
+// const values=coding1.forEach((item)=>{
+//     return item
+// })
+// console.log(values)   //undefined => forEach doesnt return value
