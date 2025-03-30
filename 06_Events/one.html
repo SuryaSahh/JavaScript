@@ -39,24 +39,36 @@
     // altkey, ctrlkey, shiftkey, keyCode
 
     // best approch
-    document.getElementById('images').addEventListener('click',function(e){  //e => event object
-        console.log("clicked inside the ul")
-    },false)  //false by default, so no need to write
+    // document.getElementById('images').addEventListener('click',function(e){  //e => event object
+    //     console.log("clicked inside the ul")
+    // },false)  //false by default, so no need to write
 
-    document.getElementById('owl').addEventListener('click',function(e){
-        console.log("owl clicked")
-        e.stopPropagation()   //stop bubbling
-    },false) 
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("owl clicked")
+    //     e.stopPropagation()   //stop bubbling
+    // },false) 
 
-    document.getElementById('google').addEventListener('click',function(e){
-        e.preventDefault()  //prevent to open google
-        e.stopPropagation()
-        console.log("google clicked")
-    })
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault()  //prevent to open google
+    //     e.stopPropagation()
+    //     console.log("google clicked")
+    // })
 
     // Event propagation
     // Bubbling => false => down to up
     // Capturing => true => up to down
+
+    // project:
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.tagName)
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id)
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+        
+        // removeIt.parentNode.removeChild(removeIt)
+    })
 
 </script>
 </html>
