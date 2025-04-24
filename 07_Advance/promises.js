@@ -88,4 +88,27 @@ async function consumePromiseFive(){
 }
 consumePromiseFive()
 
+// 6th
+// from api
+// async function getAllUsers(){
+//     try{
+//         const response = await fetch('https://randomuser.me/api/')
+//         const data = await response.json()
+//         console.log(data);
+//     }catch(error){
+//         console.log('E:', error)
+//     }
+// }
+// getAllUsers()
+
+fetch('https://randomuser.me/api/')
+.then((response)={
+    return response.json()
+})
+.then((data)=>{
+    console.log(data);
+})
+.catch((error)=>console.log(error))
+
+
 
