@@ -53,7 +53,7 @@ teacher.__proto__ = User // inheritance
 // modern way of inheritance
 Object.setPrototypeOf(teachingSuppot, User) // inheritance
 
-let anotherUser = "surya     "
+let anotherUser = "suryasah     "
 String.prototype.truelength = function(){
     console.log(`${this}`)
     console.log(`true length is ${this.trim().length}`)
