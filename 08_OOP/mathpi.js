@@ -11,6 +11,7 @@ const descripter = Object.getOwnPropertyDescriptor(Math, "PI")   //(math is obje
 // It won't show up in loops like for...in.
 // You cannot delete it or redefine its descriptor.
 
+
 const chai = {
     name : 'ginger chai',
     price : 235,
