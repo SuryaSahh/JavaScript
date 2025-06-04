@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <div>
+        <input class="value1" type="number">
+        <input class="value2" type="number">
+        <button onclick="calculate('sum')">Sum</button>
+        <button onclick="calculate('difference')">Difference</button>
+        <button onclick="calculate('product')">Product</button>
+        <button onclick="calculate('divide')">Divide</button>
+        <div id="sum"></div>
+    </div>
+
+    <script>
+        function getValues() {
+            let v1 = parseFloat(document.querySelector('.value1').value);
+            let v2 = parseFloat(document.querySelector('.value2').value);
+            return [v1, v2];
+        }
+
+        function calculate(operation) {
+            let [v1, v2] = getValues();
+            let result;
+
+            switch (operation) {
+                case 'sum':
+                    result = "Sum: " + (v1 + v2);
+                    break;
+                case 'difference':
+                    result = "Difference: " + (v1 - v2);
+                    break;
+                case 'product':
+                    result = "Product: " + (v1 * v2);
+                    break;
+                case 'divide':
+                    result = v2 !== 0 ? "Divide: " + (v1 / v2) : "Cannot divide by zero";
+                    break;
+            }
+
+            document.getElementById('sum').innerHTML = result;
+        }
+    </script>
+</body>
+</html>
